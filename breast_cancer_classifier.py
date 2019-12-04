@@ -56,3 +56,11 @@ plt.plot(r.history["accuracy"], label="acc")
 plt.plot(r.history["val_accuracy"], label="val_acc")
 plt.legend()
 plt.show()
+
+# Make prediction
+P = model.predict(X_test)
+
+# round to get the actual prediction
+import numpy as np
+P = np.round(P).flatten()
+print(P)
